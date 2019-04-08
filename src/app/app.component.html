@@ -1,0 +1,135 @@
+<nav class="navbar navbar-toggleable-md fixed-top navbar-inverse transMenu">
+  <a class="navbar-brand" href="#">
+    <img src="assets/images/ms.svg" height="58" alt="" class="d-inline-block" style="padding:10px;"><span class="ms">M</span>ohit <span class="ms">S</span>hrivastava
+  </a>
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="nav navbar-nav">
+      <li *ngFor="let menu of msMenu" class="nav-item {{menu == activeMenu ? 'active':''}}">
+        <a class="nav-link" href="#"><span class="{{menu.MenuIcon}}"></span>{{menu.MenuName}}<span class="sr-only" *ngIf="menu == activeMenu">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3500">
+  <ol class="carousel-indicators" >
+    <li *ngFor="let num of msCarousel" data-target="#carouselExampleIndicators" [attr.data-slide-to]="num" class="{{num == 0 ? 'active' : ''}}" ></li>
+  </ol>
+  <div class="carousel-inner" role="listbox" >
+    <div *ngFor="let objcar of objCarousel" class="carousel-item {{objcar.ind == 1 ? 'active':''}}">
+      <img class="d-block img-fluid ml-auto mr-auto" src="{{objcar.source}}" alt="{{objcar.alternate}}" />
+		<div class="carousel-caption d-none d-md-block">	  
+			<h3>{{objcar.heading}}</h3>
+			<p>{{objcar.desc}}</p>
+	   </div>		  
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div class="row m-3" id="MyWebStarts">
+	<div class="col-md-4 text-center" *ngFor="let t3 of objTop3">
+		<img class="rounded-circle" src="{{t3.source}}" alt="{{t3.alternate}}" width="150" height="150">
+          <h2>{{t3.heading}}</h2>
+          <p>{{t3.desc}}</p>
+          <p><a class="btn btn-secondary" href="#" role="button">{{t3.btnLable}} &raquo;</a></p>
+	</div>
+</div>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1>My Passions</h1>
+	<p class="lead">The solutions and development area is constantly changing and I feel proud to be in the frontline when it comes to new solutions for making the resources work in the best ways. My job is to make your applications that can express the feelings that you want your apps to express to your users. Also helps the apps to optimize performance and popularity</p>
+  </div>
+</div>	
+
+<div class="row m-2">
+	<div class="card-columns">
+		<div class="card text-center" *ngFor="let mp of objMyPassion">
+		<img class="card-img-top mt-2" src="{{mp.source}}" alt="{{mp.alternate}}" height="96" width="96"/>
+		  <div class="card-block">
+			<h3 class="card-title">{{mp.title}}</h3>
+			<p class="card-text">{{mp.text}}</p>
+			<a href="#" class="btn btn-primary">{{mp.btnText}}</a>
+		  </div>
+		  <div class="card-footer text-justify">
+			<small class="text-muted">Tags: {{mp.tags.join(', ')}}</small>
+		  </div>
+		</div>		
+	</div>
+</div>
+
+<div class="jumbotron">
+  <h1>Mohit Shrivastava, Welcomes you!!</h1>
+  <p class="lead">This is Mohit Shrivastava, the one who can handle your website design, web programming and web-marketing (Search Engine Optimization (SEO),Search Engine Marketing (SEM), making facebook, twitter, and other major social website pages and connect it with your web-pages. I am also designing and programming web sites that are technologically advanced and user oriented.</p>
+  <p class="lead" style="text-align:right">
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  </p>
+</div>
+
+<div class="container-fluid">
+	<a href="http://stackoverflow.com/users/3796048/mohit-shrivastava" style="text-decoration:none !important; color:inherit;">
+	<div class="card text-center">
+	  <h2 class="card-header" style="background:#F48024; height:110px;">Stackoverflow Activities - Mohit Shrivastava</h2>
+	  <div class="card-img-top mt-5" style="position:absolute; left:46%"><img src="{{mySO.items[0].owner.profile_image}}" class="rounded-circle"/></div>
+	  <div class="card-block mt-5">
+		<h4 class="card-title">{{mySO.items[0].owner.display_name}}, {{mySO.items[0].owner.location}}</h4>
+		<p class="card-text">my reputation is {{mySO.items[0].owner.reputation}}</p>
+		<a href="http://stackoverflow.com/users/3796048/mohit-shrivastava?tab=profile" class="btn btn-primary">My Profile tab</a>
+	  </div>
+	  <div class="card-footer text-muted" style="background:#343434">
+		<i class="fa fa-diamond" aria-hidden="true" style="color:#CD7F32"> Gold: {{myInfoSO.items[0].badge_counts.gold}} </i> &nbsp; 
+		<i class="fa fa-trophy" aria-hidden="true" style="color:#E6E8FA"> Silver: {{myInfoSO.items[0].badge_counts.silver}} </i> &nbsp;
+		<i class="fa fa-shield" aria-hidden="true" style="color:#A67D3D"> Bronze: {{myInfoSO.items[0].badge_counts.bronze}} </i> &nbsp;
+	  </div>
+	</div>
+	</a>	
+	<div class="card-columns mt-4">
+		<div class="card" style="background-color: #FAFAFA; border-color: #F48024;" *ngFor="let myso of mySO.items">
+		 <div class="card-block">
+			 <div class="card-header" [style.background] = "myso.is_accepted ? '#148105': '#1C9BB4'">
+				<a href="http://stackoverflow.com/q/{{myso.question_id}}" target="_blank" style="text-decoration:none !important; color:#fff">
+				<div class="card-title"><h4 [innerHTML]="myso.title"></h4></div>
+				</a>
+			 </div>
+			<p class="card-text mt-2" [innerHTML]="myso.body"></p>
+			<a href="http://stackoverflow.com/a/{{myso.answer_id}}" target="_blank" class="btn btn-primary">Read More &raquo;</a>
+		  </div>
+		</div>
+	</div>
+</div>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1>My Projects</h1>
+    <p class="lead">Lets have a look at my few of the projects which takes basic techniques and supercharges them to be produced sophisticated systems for assisting with scheduling, resource management, communication, cost control, quality control, issue tracking and project administration and lot more. Most of them have the capability of customization. Moreover, you can tailor your business workflows, keywords, labels, charts and dashboards to reflect your industry and your projects.</p>
+  </div>
+</div>
+<div class="row m-2">
+	<div class="card-columns">
+		<div class="card text-center p-2" *ngFor="let myProj of objMyProjects">
+		<div class="{{myProj.icon}}"></div>
+		  <div class="card-block" style="padding:0.25rem 0.25rem 1.25rem 0;">
+			<h3 class="card-title">{{myProj.title}}</h3>
+			<p class="card-text text-justify" [innerHTML]="myProj.text"></p>
+			<a href="#" class="btn btn-primary">Read More &raquo;</a>
+		  </div>
+		  <div class="card-footer text-justify">
+			<small class="text-muted">Technologies Used: {{myProj.techUsed.join(', ')}}</small>
+		  </div>
+		</div>		
+	</div>
+</div>
+<nav class="navbar navbar bg-faded">
+  <small class="text-muted text-center">&copy; Mohit Shrivastava. All rights reserved since 1983. Powered by: Mohit Shrivastava</small>
+</nav>
