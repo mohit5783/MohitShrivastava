@@ -1,16 +1,4 @@
-<div align="center">
-  <a href="#">
-  	<img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy-downsized.gif" alt="Logo project" height="160" />
-  </a>
-  <br>
-  <br>
-  <p>
-    <b>MohitShrivastava</b>
-  </p>
-  <p>
-     <i>Created</i>
-  </p>
-  <p>
+#MohitShrivastava
 
 [![Build Status](https://travis-ci.com/mohit5783/MohitShrivastava.svg?branch=master)](https://travis-ci.com/mohit5783/MohitShrivastava)
 [![NPM version](https://img.shields.io/npm/v/MohitShrivastava?style=flat-square)](https://img.shields.io/npm/v/MohitShrivastava?style=flat-square)
@@ -19,8 +7,6 @@
 [![devDependencies Status](https://david-dm.org/mohit5783/MohitShrivastava/dev-status.svg?style=flat-square)](https://david-dm.org/mohit5783/MohitShrivastava?type=dev)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-  </p>
-</div>
 
 ---
 
@@ -46,7 +32,7 @@ Explain to your users how they can install your product :)
 ## Usage 💡
 In this section you can write some popular examples about how you can interact with the project. It's advisable to write some code here.
 
-## Exemples 🖍
+## Examples 🖍
 ```
 Show some code
 ```
@@ -63,19 +49,10 @@ Please make sure to read the [Contributing Guide]() before making a pull request
 Thank you to all the people who already contributed to this project!
 
 ## Maintainers 👷
-List of maintainers, replace all `href`, `src` attributes by your maintainers datas.
-<table>
-  <tr>
-    <td align="center"><a href="https://lucastostee.now.sh/"><img src="https://avatars3.githubusercontent.com/u/22588842?s=460&v=4" width="100px;" alt="Tostee Lucas"/><br /><sub><b>Tostee Lucas</b></sub></a><br /><a href="#" title="Code">💻</a></td>
-  </tr>
-</table>
+
 
 ## License ⚖️
 Enter what kind of license you're using.
 
 ---
-<div align="center">
-	<b>
-		<a href="https://www.npmjs.com/package/get-good-readme">File generated with get-good-readme module</a>
-	</b>
-</div>
+
